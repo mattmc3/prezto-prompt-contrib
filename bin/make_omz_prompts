@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+
+prjhome="${0:a:h:h}"
+
+function _main() {
+  local dest="$prjhome/prompt/functions"
+  local omz="$prjhome/prompt/external/ohmyzsh"
+  [[ -d $dest ]] || mkdir -p $dest
+  local theme_file theme_name prompt_setup_file
+  for theme_file in $omz/themes/*.zsh-theme; do
+    theme_name=${theme_file:t:r}
+    prompt_setup_file=$dest/prompt_omz-${theme_name}_setup
+
+    echo "ZSH_THEME=$theme_name; prompt_omz_setup" >| "$prompt_setup_file"
+  done
+}
+_main

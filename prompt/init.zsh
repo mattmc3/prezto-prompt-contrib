@@ -4,12 +4,13 @@ if [[ ! -d $ZPREZTODIR/modules/prompt ]]; then
   return 1
 fi
 
-# use the prezto prompts as well
-fpath=($ZPREZTODIR/modules/prompt/functions(-/FN) $fpath)
+# use the prezto built-in prompts as well
+fpath=($ZPREZTODIR/modules/prompt/functions $fpath)
 function {
-  local pfunction
   setopt LOCAL_OPTIONS EXTENDED_GLOB
-  for pfunction in $ZPREZTODIR/modules/prompt/functions/$~pfunction_glob; do
+  local pfunction
+  local pfunction_glob='^([_.]*|prompt_*_setup|README*|*~)(-.N:t)'
+  for pfunction in $ZPREZTODIR/modules/prompt/functions/**/$~pfunction_glob; do
     autoload -Uz "$pfunction"
   done
 }

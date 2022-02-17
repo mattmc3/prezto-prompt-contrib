@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+prjhome="${0:a:h:h}"
+
+function _main() {
+  local omz_prompt_setup_file
+  for omz_prompt_setup_file in $prjhome/prompt/functions/prompt_omz-*_setup(N); do
+    rm $omz_prompt_setup_file
+  done
+}
+_main
