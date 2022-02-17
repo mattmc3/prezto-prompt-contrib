@@ -2,12 +2,18 @@
 
 Additional prompts for [Prezto][prezto]
 
+## What's included
+
+- [Lean][lean]
+- [Oh-My-Zsh themes][omz-themes]
+- [Starship][starship]
+
 ## Installation
 
 Clone the repo:
 
 ```zsh
-git clone --depth 1 --recurse-submodules --shallow-submodules \
+git clone --recurse-submodules \
   https://github.com/mattmc3/prezto-prompt-contrib \
   ${ZDOTDIR:-$HOME}/.zprezto-prompt-contrib
 ```
@@ -26,15 +32,12 @@ zstyle ':prezto:load' pmodule-allow-overrides 'yes'
 Now, you can have access to new prompts like [starship]:
 
 ```zsh
-# Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'starship'
 ```
 
 ## Oh-My-Zsh themes
 
-This project supports using [Oh-My-Zsh][omz] style themes for your prompt. Oh-My-Zsh
+This project also supports using [Oh-My-Zsh][omz] style themes for your prompt. Oh-My-Zsh
 stores its themes in \*.zsh-theme files, however many of these themes have names that
 collide with Prezto theme names (ex: sorin, agnoster). Due to this, using zsh-theme
 files works a little differently than typical prompts that provide proper prompt
@@ -45,9 +48,6 @@ variable to your preferred OMZ theme. Then, set the Prezto prompt value to 'omz'
 your `.zpreztorc` like this:
 
 ```zsh
-# .zpreztorc
-# Set the prompt theme to load.
-# To use OMZ themes, first set the ZSH_THEME variable
 ZSH_THEME=robbyrussell
 zstyle ':prezto:module:prompt' theme 'omz'
 ```
@@ -87,17 +87,12 @@ ZSH_THEME=dracula
 zstyle ':prezto:module:prompt' theme 'omz'
 ```
 
-## Additional prompts
+## Other prompts
 
 The goal of this project is not to include every prompt available for Prezto, but
 if there's an active, popular prompt project out there you'd like to see included,
 feel free to open an issue or submit a PR.
 
-## Prompts
-
-- [Lean][lean]
-- [Oh-My-Zsh][omz-themes]
-- [Starship][starship]
 
 [dracula]:            https://draculatheme.com/zsh
 [lean]:               https://github.com/miekg/lean
