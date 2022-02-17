@@ -1,0 +1,3 @@
+[submodule "prompt/external/lean"]
+	path = prompt/external/lean
+	url = https://github.com/miekg/lean
