@@ -1,3 +1,6 @@
 [submodule "prompt/external/lean"]
 	path = prompt/external/lean
 	url = https://github.com/miekg/lean
+[submodule "prompt/external/ohmyzsh"]
+	path = prompt/external/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
