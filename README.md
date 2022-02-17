@@ -60,7 +60,7 @@ OMZ has a lot of themes and most of them you probably won't ever want or use.
 
 ## 3rd party zsh-themes
 
-There are a lot of 3rd party prompts that use the [Oh-My-Zsh] \*.zsh-theme file
+There are a lot of 3rd party prompts that use the [Oh-My-Zsh][omz] \*.zsh-theme file
 convention rather than the `prompt_${name}_setup` standard. That's okay, you can still
 use those themes the same way [OMZ instructs you to][omz-custom-themes].
 
