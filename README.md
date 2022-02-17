@@ -34,6 +34,8 @@ zstyle ':prezto:module:prompt' theme 'starship'
 
 ## Prompts
 
+- [Lean]
 - [Starship]
 
+[lean]:      https://github.com/miekg/lean
 [starship]:  https://starship.rs
