@@ -1,0 +1,8 @@
+if ! command -v starship &>/dev/null; then
+  # We could install it for you, but running a remotely hosted shell script seems
+  # like a bad plan. Let's let the user do it themselves and accept that risk.
+  # sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+  >&2 echo "Starship prompt not installed. See https://starship.rs"
+  return 1
+fi
+eval "$(starship init zsh)"
