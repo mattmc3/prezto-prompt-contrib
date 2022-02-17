@@ -68,7 +68,7 @@ Simply, set the `$ZSH_CUSTOM` variable to a location of your choosing, and place
 \*.zsh-theme files in that directory. Then, set your theme with the `$ZSH_THEME` variable
 and set the Prezto prompt style to 'omz'.
 
-For example, here is how you would use the [dracula theme]:
+For example, here is how you would use the [dracula theme][dracula]:
 
 Per the Dracula theme instructions, first clone the repository, and then symlink the
 zsh-theme file to your OMZ custom themes location:
