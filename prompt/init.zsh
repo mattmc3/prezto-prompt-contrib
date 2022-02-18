@@ -1,3 +1,5 @@
+setopt prompt_subst
+
 ZPREZTODIR=${ZPREZTODIR:-${ZDOTDIR:-$HOME}/.zprezto}
 if [[ ! -d $ZPREZTODIR/modules/prompt ]]; then
   >&2 echo "Prezto module not found 'prompt'."
@@ -7,7 +9,7 @@ fi
 # use the prezto built-in prompts as well
 fpath=($ZPREZTODIR/modules/prompt/functions $fpath)
 function {
-  setopt LOCAL_OPTIONS EXTENDED_GLOB
+  setopt local_options extended_glob
   local pfunction
   local pfunction_glob='^([_.]*|prompt_*_setup|README*|*~)(-.N:t)'
   for pfunction in $ZPREZTODIR/modules/prompt/functions/**/$~pfunction_glob; do
